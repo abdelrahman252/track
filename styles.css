@@ -1044,7 +1044,7 @@ footer .footer-copyright p:last-child a {
     }
 
     .header>div {
-        margin-top: 6rem;
+        margin-top: 6rem !important;
     }
 
     .header .header-left .header-input button {
