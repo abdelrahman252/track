@@ -30,8 +30,8 @@ a {
     --color-subtext: #FF8A71;
     --transition: all .4s linear;
     --transition-animation: transform 1s ease;
-    --transform-right: translateX(400%);
-    --transform-left: translateX(-400%);
+    --transform-right: translateX(300%);
+    --transform-left: translateX(-300%);
     --transform-zero: translateX(0%);
 }
 
@@ -201,7 +201,8 @@ nav .sign .org button {
 
 .header .header-left .header-input {
     width: 100%;
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 3rem;
+
     position: relative;
 
 }
@@ -326,7 +327,7 @@ nav .sign .org button {
     width: 100%;
     justify-content: space-between;
     margin: 1rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 h4 {
@@ -1014,6 +1015,80 @@ footer .footer-copyright p:last-child a {
     display: none;
 }
 
+@media screen and (max-width: 768px) {
+
+    .header .header-left h1,
+    .features .features-left h2,
+    .openai .openai-right h2,
+    .blog h2,
+    footer .footer-heading h2 {
+        font-size: 35px;
+        line-height: 50px;
+
+        width: 256px;
+    }
+
+    .header .header-left .header-people,
+    .features .features-right .text {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 2rem 0;
+    }
+
+    .cta {
+        margin: 2rem;
+    }
+
+    .header .header-left .header-input button {
+        top: 52px;
+        right: 60px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .cta .cta-left h3 {
+        line-height: 30px;
+    }
+
+    .cta .cta-left p {
+        line-height: 18px;
+    }
+
+    .header .header-right img {
+        width: 250px;
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .features .features-right .text h4 {
+        margin-bottom: 1rem;
+    }
+
+    .gpt {
+        margin: 4rem 0;
+    }
+
+    .gpt .gpt-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header .header-left {
+        margin: 0;
+    }
+
+    .header .header-left p {
+        width: 250px;
+    }
+
+    .blog .blog-container .blog-right {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media screen and (max-width: 700px) {
     .blog .blog-container .blog-right {
         grid-template-columns: repeat(1, 1fr);
@@ -1022,6 +1097,9 @@ footer .footer-copyright p:last-child a {
 
 
 @media screen and (max-width: 990px) {
+    .div__padding {
+        padding: 4rem 2rem;
+    }
 
     .header,
     .openai,
@@ -1039,7 +1117,7 @@ footer .footer-copyright p:last-child a {
     }
 
     .gpt-mid a {
-        margin-top: 5px;
+        margin-top: 15px;
     }
 
     .blog .blog-container {
