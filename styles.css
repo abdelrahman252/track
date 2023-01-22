@@ -1031,8 +1031,7 @@ footer .footer-copyright p:last-child a {
     footer .footer-heading h2 {
         font-size: 35px;
         line-height: 50px;
-
-        width: 256px;
+        width: 255px;
     }
 
     .header .header-left .header-people,
