@@ -1020,9 +1020,6 @@ footer .footer-copyright p:last-child a {
 }
 
 @media screen and (max-width: 768px) {
-    .header>div {
-        margin-top: 6rem;
-    }
 
     .header .header-left h1,
     .features .features-left h2,
@@ -1044,6 +1041,10 @@ footer .footer-copyright p:last-child a {
 
     .cta {
         margin: 2rem;
+    }
+
+    .header>div {
+        margin-top: 6rem;
     }
 
     .header .header-left .header-input button {
