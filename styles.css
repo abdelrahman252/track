@@ -159,6 +159,10 @@ nav .sign .org button {
     padding-top: 120px;
 }
 
+.header>div {
+    display: flex;
+}
+
 .header .header-left {
     flex: 1;
     display: flex;
@@ -1016,6 +1020,9 @@ footer .footer-copyright p:last-child a {
 }
 
 @media screen and (max-width: 768px) {
+    .header>div {
+        margin-top: 6rem;
+    }
 
     .header .header-left h1,
     .features .features-left h2,
