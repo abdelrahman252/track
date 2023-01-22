@@ -1036,7 +1036,8 @@ footer .footer-copyright p:last-child a {
     }
 
     .header .header-left .header-people,
-    .features .features-right .text {
+    .features .features-right .text,
+    .header>div {
         flex-direction: column;
         align-items: flex-start;
         margin: 2rem 0;
