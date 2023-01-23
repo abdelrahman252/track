@@ -39,7 +39,7 @@ window.addEventListener("scroll", animate);
 animate();
 
 function animate() {
-  const trigger = window.innerHeight / 5 * 4;
+  const trigger = (window.innerHeight / 5) * 4;
   header.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < trigger) {
@@ -49,6 +49,30 @@ function animate() {
     }
   });
 }
+
+// fix the scroll to section
+
+const moveLinks = document.querySelectorAll(".move-link");
+
+moveLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    const navbar = nav.getBoundingClientRect().height;
+    let position = element.offsetTop - navbar;
+    console.log(position);
+    window.scrollTo({
+      top: position,
+      left: 0,
+    });
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("toggle");
+    links.forEach((link) => {
+      link.classList.toggle("fade");
+    });
+  });
+});
 
 // cursor
 const coords = { x: 0, y: 0 };

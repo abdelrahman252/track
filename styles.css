@@ -11,7 +11,8 @@
 body {
     background: var(--color-bg);
     font-family: var(--font-family);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
 }
 
 a {
@@ -32,7 +33,7 @@ a {
     --transition-animation: transform 1s ease;
     --transform-right: translateX(300%);
     --transform-left: translateX(-300%);
-    --transform-zero: translateX(0%);
+    --transform-zero: translateX(0);
 }
 
 .div__padding {
@@ -1105,6 +1106,14 @@ footer .footer-copyright p:last-child a {
 
 
 @media screen and (max-width: 990px) {
+    /* .navbar .nav-links li:hover {
+        transform: scale(1) ;
+        -webkit-transform: scale(1) ;
+        -moz-transform: scale(1) ;
+        -ms-transform: scale(1) ;
+        -o-transform: scale(1) ;
+} */
+
     .div__padding {
         padding: 4rem 2rem;
     }
