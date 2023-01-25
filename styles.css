@@ -857,6 +857,19 @@ h4::before {
 
 }
 
+.countDown .countDown-left {
+    transition: var(--transition-animation);
+    transform: var(--transform-left);
+    -webkit-transform: var(--transform-left);
+    -moz-transform: var(--transform-left);
+    -ms-transform: var(--transform-left);
+    -o-transform: var(--transform-left);
+    -webkit-transition: var(--transition-animation);
+    -moz-transition: var(--transition-animation);
+    -ms-transition: var(--transition-animation);
+    -o-transition: var(--transition-animation);
+}
+
 .countDown .countDown-left h2 {
     font-weight: 900;
     font-size: 45px;
@@ -928,6 +941,16 @@ h4::before {
     justify-content: center;
     align-items: center;
     gap: 60px;
+    transition: var(--transition-animation);
+    transform: var(--transform-right);
+    -webkit-transform: var(--transform-right);
+    -moz-transform: var(--transform-right);
+    -ms-transform: var(--transform-right);
+    -o-transform: var(--transform-right);
+    -webkit-transition: var(--transition-animation);
+    -moz-transition: var(--transition-animation);
+    -ms-transition: var(--transition-animation);
+    -o-transition: var(--transition-animation);
 }
 
 .countDown .countDown-right div {
