@@ -31,25 +31,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("toggle");
 });
 
-const header = document.querySelectorAll(".animate");
-console.log(header);
-
-window.addEventListener("scroll", animate);
-
-animate();
-
-function animate() {
-  const trigger = (window.innerHeight / 5) * 4;
-  header.forEach((box) => {
-    const boxTop = box.getBoundingClientRect().top;
-    if (boxTop < trigger) {
-      box.classList.add("show");
-    } else {
-      box.classList.remove("show");
-    }
-  });
-}
-
 // fix the scroll to section
 
 const moveLinks = document.querySelectorAll(".move-link");
@@ -61,7 +42,6 @@ moveLinks.forEach(function (link) {
     const element = document.getElementById(id);
     const navbar = nav.getBoundingClientRect().height;
     let position = element.offsetTop - navbar;
-    console.log(position);
     window.scrollTo({
       top: position,
       left: 0,
@@ -74,6 +54,75 @@ moveLinks.forEach(function (link) {
   });
 });
 
+// counter
+const counters = document.querySelectorAll(".counter");
+const counterMove = document.getElementById("counter");
+
+window.addEventListener("scroll", () => {
+  if (counterMove.offsetTop) {
+    counters.forEach((counter) => {
+      counter.innerText = "0";
+      const updateCounter = () => {
+        const target = +counter.getAttribute("data-target");
+        const c = +counter.innerText;
+        const increment = target / 500;
+        if (c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 1);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter(1);
+    });
+  } else {
+  }
+});
+
+// count down
+// The End Of The Year Date To Countdown To
+// 1000 milliseconds = 1 Second
+
+let countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+// console.log(countDownDate);
+
+let counter = setInterval(() => {
+  let dateNow = new Date().getTime();
+
+  let dateDiff = countDownDate - dateNow;
+
+  let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
+
+  document.querySelector(".days").innerHTML = days < 10 ? `0${days}` : days;
+  document.querySelector(".hours").innerHTML = hours < 10 ? `0${hours}` : hours;
+  document.querySelector(".minutes").innerHTML =
+    minutes < 10 ? `0${minutes}` : minutes;
+  document.querySelector(".seconds").innerHTML =
+    seconds < 10 ? `0${seconds}` : seconds;
+  if (dateDiff < 0) {
+    clearInterval(counter);
+  }
+}, 1000);
+
+// animation
+const header = document.querySelectorAll(".animate");
+
+window.addEventListener("scroll", animate);
+animate();
+function animate() {
+  const trigger = (window.innerHeight / 5) * 4;
+  header.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < trigger) {
+      box.classList.add("show");
+    } else {
+      box.classList.remove("show");
+    }
+  });
+}
 // cursor
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");

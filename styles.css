@@ -687,10 +687,62 @@ h4::before {
 
 .cta .cta-right button:hover {
     transform: scale(1.2);
-
 }
 
 /* end of cta */
+
+
+/* start of counter  */
+.counter-center {
+    background: linear-gradient(to right, #e3b8e7, #edbca3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    flex-wrap: wrap;
+}
+
+.fa-facebook-f {
+    font-size: 75px;
+    color: #3b5998;
+}
+
+.fa-youtube {
+    font-size: 75px;
+    color: #ff0000;
+}
+
+.fa-twitter {
+    font-size: 75px;
+    color: #1da1f2;
+}
+
+.fa-github {
+    font-size: 75px;
+    color: #000;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.counter-container span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+
+
+/* end of counter */
 
 /* start of blog */
 .blog {
@@ -776,6 +828,166 @@ h4::before {
 }
 
 /* end og blog */
+
+/* start of count down */
+.countDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    background-image: linear-gradient(230deg,
+            hsl(269deg 94% 69%) 2%,
+            hsl(317deg 84% 64%) 6%,
+            hsl(341deg 100% 70%) 13%,
+            hsl(6deg 100% 72%) 19%,
+            hsl(15deg 80% 67%) 26%,
+            hsl(346deg 46% 57%) 32%,
+            hsl(310deg 29% 40%) 39%,
+            hsl(240deg 30% 30%) 46%,
+            hsl(213deg 61% 25%) 52%,
+            hsl(213deg 41% 38%) 59%,
+            hsl(224deg 34% 51%) 66%,
+            hsl(216deg 51% 65%) 73%,
+            hsl(211deg 32% 55%) 80%,
+            hsl(213deg 27% 37%) 86%,
+            hsl(215deg 29% 21%) 93%,
+            hsl(216deg 71% 5%) 100%);
+    padding: 12rem 6rem;
+
+}
+
+.countDown .countDown-left h2 {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(225deg,
+            hsl(0deg 95% 83%) 0%,
+            hsl(356deg 100% 82%) 17%,
+            hsl(353deg 100% 81%) 31%,
+            rgb(229, 111, 130) 42%,
+            hsl(345deg 100% 79%) 52%,
+            hsl(342deg 100% 78%) 61%,
+            hsl(338deg 100% 77%) 68%,
+            rgb(222, 105, 156) 74%,
+            hsl(331deg 99% 75%) 80%,
+            hsl(327deg 95% 74%) 86%,
+            rgb(201, 101, 163) 92%,
+            rgb(222, 92, 187) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countDown .countDown-left h3 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 24px;
+    color: var(--color-subtext);
+    margin: 4rem 0;
+}
+
+.countDown .countDown-left span {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 24px;
+    color: #AE67FA;
+    text-shadow: 11px 15px 10px #000000;
+    padding: 0 2rem;
+    font-family: cursive;
+}
+
+.countDown .countDown-left button {
+    background: var(--gradient-text);
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    box-shadow: rgba(36, 5, 5, 0.35) 0px 5px 15px;
+
+}
+
+.countDown .countDown-left button:hover {
+    transform: scale(1.2);
+}
+
+.countDown .countDown-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.countDown .countDown-right div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(55deg,
+            hsl(272deg 40% 25%) 0%,
+            hsl(275deg 37% 26%) 16%,
+            hsl(279deg 35% 27%) 27%,
+            hsl(282deg 33% 28%) 34%,
+            hsl(285deg 31% 29%) 38%,
+            hsl(289deg 29% 30%) 42%,
+            hsl(292deg 27% 31%) 44%,
+            hsl(295deg 25% 32%) 47%,
+            hsl(299deg 23% 33%) 51%,
+            hsl(303deg 22% 34%) 57%,
+            hsl(306deg 22% 36%) 69%,
+            hsl(309deg 21% 37%) 100%);
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.countDown .countDown-right div h5 {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 45px;
+    background-image: linear-gradient(60deg,
+            hsl(210deg 58% 69%) 0%,
+            hsl(210deg 56% 69%) 34%,
+            hsl(210deg 54% 69%) 50%,
+            hsl(210deg 53% 70%) 59%,
+            hsl(210deg 51% 70%) 66%,
+            hsl(210deg 50% 70%) 70%,
+            hsl(210deg 48% 71%) 74%,
+            hsl(210deg 46% 71%) 78%,
+            hsl(210deg 44% 71%) 81%,
+            hsl(210deg 43% 72%) 86%,
+            hsl(210deg 41% 72%) 92%,
+            hsl(209deg 39% 72%) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countDown .countDown-right div span {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 45px;
+    color: white;
+}
+
+/* end of count down */
 
 /* start of footer */
 footer {
@@ -1021,20 +1233,28 @@ footer .footer-copyright p:last-child a {
 }
 
 @media screen and (max-width: 768px) {
+    .countDown .countDown-left span {
+        font-size: 56px;
+    }
 
     .header .header-left h1,
     .features .features-left h2,
     .openai .openai-right h2,
     .blog h2,
+    .countDown .countDown-left h2,
     footer .footer-heading h2 {
         font-size: 35px;
         line-height: 50px;
         width: 255px;
     }
 
-    .header .header-left .header-people,
-    .features .features-right .text,
+    .counter-center,
     .header>div {
+        flex-direction: column;
+    }
+
+    .header .header-left .header-people,
+    .features .features-right .text {
         flex-direction: column;
         align-items: flex-start;
         margin: 2rem 0;
@@ -1096,13 +1316,10 @@ footer .footer-copyright p:last-child a {
     .blog .blog-container .blog-right {
         grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
-@media screen and (max-width: 700px) {
-    .blog .blog-container .blog-right {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
+
 
 
 @media screen and (max-width: 990px) {
@@ -1118,10 +1335,26 @@ footer .footer-copyright p:last-child a {
         padding: 4rem 2rem;
     }
 
+    .countDown {
+        background-image: linear-gradient(40deg,
+                hsl(269deg 94% 69%) 0%,
+                hsl(324deg 94% 66%) 13%,
+                hsl(353deg 100% 72%) 26%,
+                hsl(21deg 87% 68%) 37%,
+                hsl(346deg 39% 54%) 48%,
+                hsl(290deg 26% 31%) 58%,
+                hsl(211deg 89% 11%) 68%,
+                hsl(213deg 40% 29%) 79%,
+                hsl(212deg 30% 48%) 89%,
+                hsl(210deg 58% 69%) 100%);
+    }
+
     .header,
     .openai,
     .cta,
-    .features {
+    .features,
+    .countDown,
+    .countDown .countDown-right {
         flex-direction: column;
     }
 
