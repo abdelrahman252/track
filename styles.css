@@ -1166,6 +1166,66 @@ footer .footer-copyright p:last-child a {
 
 
 /* end of footer */
+
+.preLoaderContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999999999;
+}
+
+
+
+.preLoader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    animation: animateText 3s linear infinite;
+    -webkit-animation: animateText 3s linear infinite;
+}
+
+.preLoader span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    Left: 0;
+    color: #35146f;
+    background: rgb(255, 255, 255);
+    width: 79.5px;
+    overflow: hidden;
+    font-size: 3em;
+    padding: 5px 15px;
+    border-top: 4px solid #35146f;
+    border-bottom: 4px solid #35146f;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(200px);
+    -webkit-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(200px);
+    -moz-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(200px);
+    -ms-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(200px);
+    -o-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(200px);
+}
+
+@keyframes animateText {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+
+    }
+}
+
 .circle {
     height: 24px;
     width: 24px;

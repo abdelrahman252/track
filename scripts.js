@@ -107,6 +107,13 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
+const spinner = document.getElementById("spinner");
+if (spinner) {
+  setTimeout(() => {
+    spinner.style.display = "none";
+    setLoading(false);
+  }, 3000);
+}
 // animation
 const header = document.querySelectorAll(".animate");
 
