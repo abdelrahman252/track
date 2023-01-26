@@ -12,7 +12,7 @@ body {
     background: var(--color-bg);
     font-family: var(--font-family);
     overflow-x: hidden !important;
-    max-width: 100% !important;
+
 }
 
 a {
@@ -31,9 +31,6 @@ a {
     --color-subtext: #FF8A71;
     --transition: all .4s linear;
     --transition-animation: transform 1s ease;
-    --transform-right: translateX(300%);
-    --transform-left: translateX(-300%);
-    --transform-zero: translateX(0);
 }
 
 .div__padding {
@@ -172,17 +169,52 @@ nav .sign .org button {
     flex-direction: column;
     margin-right: 5rem;
     transition: var(--transition-animation);
-    transform: var(--transform-left);
-    -webkit-transform: var(--transform-left);
-    -moz-transform: var(--transform-left);
-    -ms-transform: var(--transform-left);
-    -o-transform: var(--transform-left);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
+@keyframes slide-left {
+    0% {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(200%);
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .header .header-left h1 {
     background: var(--gradient-text);
@@ -452,15 +484,12 @@ h4::before {
     text-align: left;
     margin-right: 5rem;
     transition: var(--transition-animation);
-    transform: var(--transform-left);
-    -webkit-transform: var(--transform-left);
-    -moz-transform: var(--transform-left);
-    -ms-transform: var(--transform-left);
-    -o-transform: var(--transform-left);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
+
 }
 
 .features .features-left h2 {
@@ -490,15 +519,11 @@ h4::before {
     align-items: center;
     flex-direction: column;
     transition: var(--transition-animation);
-    transform: var(--transform-right);
-    -webkit-transform: var(--transform-right);
-    -moz-transform: var(--transform-right);
-    -ms-transform: var(--transform-right);
-    -o-transform: var(--transform-right);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .features .features-right .text {
@@ -540,15 +565,11 @@ h4::before {
     align-items: center;
     margin-right: 2rem;
     transition: var(--transition-animation);
-    transform: var(--transform-left);
-    -webkit-transform: var(--transform-left);
-    -moz-transform: var(--transform-left);
-    -ms-transform: var(--transform-left);
-    -o-transform: var(--transform-left);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .openai .openai-left img {
@@ -561,15 +582,11 @@ h4::before {
     display: flex;
     flex-direction: column;
     transition: var(--transition-animation);
-    transform: var(--transform-right);
-    -webkit-transform: var(--transform-right);
-    -moz-transform: var(--transform-right);
-    -ms-transform: var(--transform-right);
-    -o-transform: var(--transform-right);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .openai .openai-right h5 {
@@ -624,15 +641,11 @@ h4::before {
     text-align: left;
     color: #fff;
     transition: var(--transition-animation);
-    transform: var(--transform-left);
-    -webkit-transform: var(--transform-left);
-    -moz-transform: var(--transform-left);
-    -ms-transform: var(--transform-left);
-    -o-transform: var(--transform-left);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .cta .cta-left p {
@@ -655,15 +668,11 @@ h4::before {
     align-items: center;
     margin-left: 2rem;
     transition: var(--transition-animation);
-    transform: var(--transform-right);
-    -webkit-transform: var(--transform-right);
-    -moz-transform: var(--transform-right);
-    -ms-transform: var(--transform-right);
-    -o-transform: var(--transform-right);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .cta .cta-right button {
@@ -835,39 +844,28 @@ h4::before {
     justify-content: center;
     align-items: center;
     gap: 80px;
-
-    background-image: linear-gradient(230deg,
-            hsl(269deg 94% 69%) 2%,
-            hsl(317deg 84% 64%) 6%,
-            hsl(341deg 100% 70%) 13%,
-            hsl(6deg 100% 72%) 19%,
-            hsl(15deg 80% 67%) 26%,
-            hsl(346deg 46% 57%) 32%,
-            hsl(310deg 29% 40%) 39%,
-            hsl(240deg 30% 30%) 46%,
-            hsl(213deg 61% 25%) 52%,
-            hsl(213deg 41% 38%) 59%,
-            hsl(224deg 34% 51%) 66%,
-            hsl(216deg 51% 65%) 73%,
-            hsl(211deg 32% 55%) 80%,
-            hsl(213deg 27% 37%) 86%,
-            hsl(215deg 29% 21%) 93%,
-            hsl(216deg 71% 5%) 100%);
+    background-image: linear-gradient(45deg,
+            hsl(295deg 49% 81%) 0%,
+            hsl(314deg 57% 82%) 13%,
+            hsl(327deg 68% 83%) 26%,
+            hsl(337deg 77% 83%) 37%,
+            hsl(346deg 82% 84%) 48%,
+            hsl(354deg 84% 84%) 59%,
+            hsl(2deg 82% 84%) 69%,
+            hsl(9deg 79% 82%) 79%,
+            hsl(15deg 74% 80%) 89%,
+            hsl(20deg 67% 78%) 100%);
     padding: 12rem 6rem;
 
 }
 
 .countDown .countDown-left {
     transition: var(--transition-animation);
-    transform: var(--transform-left);
-    -webkit-transform: var(--transform-left);
-    -moz-transform: var(--transform-left);
-    -ms-transform: var(--transform-left);
-    -o-transform: var(--transform-left);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .countDown .countDown-left h2 {
@@ -876,18 +874,15 @@ h4::before {
     line-height: 45px;
     margin-bottom: 2rem;
     background-image: linear-gradient(225deg,
-            hsl(0deg 95% 83%) 0%,
-            hsl(356deg 100% 82%) 17%,
-            hsl(353deg 100% 81%) 31%,
-            rgb(229, 111, 130) 42%,
-            hsl(345deg 100% 79%) 52%,
-            hsl(342deg 100% 78%) 61%,
-            hsl(338deg 100% 77%) 68%,
-            rgb(222, 105, 156) 74%,
-            hsl(331deg 99% 75%) 80%,
-            hsl(327deg 95% 74%) 86%,
-            rgb(201, 101, 163) 92%,
-            rgb(222, 92, 187) 100%);
+            hsl(286, 89%, 31%)0%,
+            hsl(286, 89%, 31%) 4%,
+            hsl(286, 89%, 31%) 10%,
+            hsl(286, 89%, 31%) 18%,
+            hsl(286, 89%, 31%)28%,
+            hsl(286, 89%, 31%) 42%,
+            hsl(286, 89%, 31%) 61%,
+            hsl(286, 89%, 31%) 83%,
+            hsl(286, 89%, 31%) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -897,7 +892,7 @@ h4::before {
     font-weight: 800;
     font-size: 40px;
     line-height: 24px;
-    color: var(--color-subtext);
+    color: #7B01FD;
     margin: 4rem 0;
 }
 
@@ -913,7 +908,7 @@ h4::before {
 
 .countDown .countDown-left button {
     background: var(--gradient-text);
-    color: #000;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
@@ -942,15 +937,11 @@ h4::before {
     align-items: center;
     gap: 60px;
     transition: var(--transition-animation);
-    transform: var(--transform-right);
-    -webkit-transform: var(--transform-right);
-    -moz-transform: var(--transform-right);
-    -ms-transform: var(--transform-right);
-    -o-transform: var(--transform-right);
     -webkit-transition: var(--transition-animation);
     -moz-transition: var(--transition-animation);
     -ms-transition: var(--transition-animation);
     -o-transition: var(--transition-animation);
+    opacity: 0;
 }
 
 .countDown .countDown-right div {
@@ -1199,10 +1190,9 @@ footer .footer-copyright p:last-child a {
     Left: 0;
     color: #35146f;
     background: rgb(255, 255, 255);
-    width: 79.5px;
+    width: 80px;
     overflow: hidden;
     font-size: 3em;
-    padding: 5px 15px;
     border-top: 4px solid #35146f;
     border-bottom: 4px solid #35146f;
     transform-origin: center;
@@ -1291,12 +1281,16 @@ footer .footer-copyright p:last-child a {
     }
 }
 
-.show {
-    transform: var(--transform-zero) !important;
-    -webkit-transform: var(--transform-zero) !important;
-    -moz-transform: var(--transform-zero) !important;
-    -ms-transform: var(--transform-zero) !important;
-    -o-transform: var(--transform-zero) !important;
+.show-left {
+    animation: slide-left 1s linear;
+    -webkit-animation: slide-left 1s linear;
+    opacity: 1 !important;
+}
+
+.show-right {
+    animation: slide-right 1s linear;
+    -webkit-animation: slide-right 1s linear;
+    opacity: 1 !important;
 }
 
 .hamburger div {
@@ -1316,6 +1310,15 @@ footer .footer-copyright p:last-child a {
 }
 
 @media screen and (max-width: 768px) {
+
+    .preLoader span{
+        width: 54px;
+        transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
+        -webkit-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
+        -moz-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
+        -ms-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
+        -o-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
+}
     .countDown .countDown-left span {
         font-size: 56px;
     }

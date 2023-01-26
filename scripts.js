@@ -80,11 +80,7 @@ window.addEventListener("scroll", () => {
 });
 
 // count down
-// The End Of The Year Date To Countdown To
-// 1000 milliseconds = 1 Second
-
 let countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
-// console.log(countDownDate);
 
 let counter = setInterval(() => {
   let dateNow = new Date().getTime();
@@ -107,29 +103,47 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
+// pre loader
 const spinner = document.getElementById("spinner");
 if (spinner) {
   setTimeout(() => {
     spinner.style.display = "none";
-    setLoading(false);
   }, 3000);
 }
-// animation
-const header = document.querySelectorAll(".animate");
 
-window.addEventListener("scroll", animate);
-animate();
-function animate() {
+// animation
+const animationLeft = document.querySelectorAll(".animate-left");
+
+window.addEventListener("scroll", animateLeft);
+animateLeft();
+function animateLeft() {
   const trigger = (window.innerHeight / 5) * 4;
-  header.forEach((box) => {
+  animationLeft.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < trigger) {
-      box.classList.add("show");
+      box.classList.add("show-left");
     } else {
-      box.classList.remove("show");
+      box.classList.remove("show-left");
     }
   });
 }
+
+const animationRight = document.querySelectorAll(".animate-right");
+
+window.addEventListener("scroll", animateRight);
+animateRight();
+function animateRight() {
+  const trigger = (window.innerHeight / 5) * 4;
+  animationRight.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < trigger) {
+      box.classList.add("show-right");
+    } else {
+      box.classList.remove("show-right");
+    }
+  });
+}
+
 // cursor
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
