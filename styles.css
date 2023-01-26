@@ -96,8 +96,6 @@ nav {
     line-height: 25px;
     text-transform: capitalize;
     margin: 0 1rem;
-
-
 }
 
 .navbar .nav-links li:hover {
@@ -111,6 +109,8 @@ nav {
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
 }
+
+
 
 nav .sign button {
     padding: 0.5rem 1rem;
@@ -901,7 +901,7 @@ h4::before {
     font-size: 100px;
     line-height: 24px;
     color: #AE67FA;
-    text-shadow: 11px 15px 10px #000000;
+    text-shadow: 11px 15px 10px #7B01FD;
     padding: 0 2rem;
     font-family: cursive;
 }
@@ -935,6 +935,7 @@ h4::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 60px;
     transition: var(--transition-animation);
     -webkit-transition: var(--transition-animation);
@@ -1126,6 +1127,7 @@ footer .footer-links .footer-link a {
     -o-transition: var(--transition);
 }
 
+
 footer .footer-links .footer-link a:hover {
     transform: translateX(10px);
     -webkit-transform: translateX(10px);
@@ -1138,20 +1140,48 @@ footer .footer-copyright {
     margin-top: 3rem;
     text-align: center;
     width: 100%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
-footer .footer-copyright p:last-child {
+
+
+footer .footer-copyright .copyright-text {
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-copyright .copyright-text p {
     font-size: 30px;
 }
 
-footer .footer-copyright p:last-child a {
+footer .footer-copyright .copyright-text a {
     font-family: cursive;
     background: var(--gradient-text);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    font-size: 35px;
+}
+
+footer .footer-copyright .copyright-text a:hover {
+    transform: skew(30deg) rotate(5deg);
+    -webkit-transform: skew(30deg) rotate(5deg);
+    -moz-transform: skew(30deg) rotate(5deg);
+    -ms-transform: skew(30deg) rotate(5deg);
+    -o-transform: skew(30deg) rotate(5deg);
 }
 
 
@@ -1216,6 +1246,7 @@ footer .footer-copyright p:last-child a {
     }
 }
 
+/* cursor */
 .circle {
     height: 24px;
     width: 24px;
@@ -1225,9 +1256,9 @@ footer .footer-copyright p:last-child a {
     left: 0;
     pointer-events: none;
     z-index: 99999999;
-
 }
 
+/* scroll to top */
 .buttn {
     background: var(--gradient-bar);
     border: none;
@@ -1311,14 +1342,15 @@ footer .footer-copyright p:last-child a {
 
 @media screen and (max-width: 768px) {
 
-    .preLoader span{
+    .preLoader span {
         width: 54px;
         transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
         -webkit-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
         -moz-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
         -ms-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
         -o-transform: rotateY(calc(var(--i) * calc(360deg / 16))) translateZ(130px);
-}
+    }
+
     .countDown .countDown-left span {
         font-size: 56px;
     }
@@ -1421,26 +1453,11 @@ footer .footer-copyright p:last-child a {
         padding: 4rem 2rem;
     }
 
-    .countDown {
-        background-image: linear-gradient(40deg,
-                hsl(269deg 94% 69%) 0%,
-                hsl(324deg 94% 66%) 13%,
-                hsl(353deg 100% 72%) 26%,
-                hsl(21deg 87% 68%) 37%,
-                hsl(346deg 39% 54%) 48%,
-                hsl(290deg 26% 31%) 58%,
-                hsl(211deg 89% 11%) 68%,
-                hsl(213deg 40% 29%) 79%,
-                hsl(212deg 30% 48%) 89%,
-                hsl(210deg 58% 69%) 100%);
-    }
-
     .header,
     .openai,
     .cta,
     .features,
-    .countDown,
-    .countDown .countDown-right {
+    .countDown {
         flex-direction: column;
     }
 
