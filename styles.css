@@ -33,6 +33,31 @@ a {
     --transition-animation: transform 1s ease;
 }
 
+html::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #AE67FA;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #430189;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #F49867;
+}
+
+html::-webkit-scrollbar-track:hover {
+    background-color: #d7320e;
+}
+
 .div__padding {
     padding: 4rem 6rem;
 }
@@ -184,6 +209,10 @@ nav .sign .org button {
         -ms-transform: translateX(-200%);
         -o-transform: translateX(-200%);
         opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
     }
 
     100% {
@@ -1313,14 +1342,14 @@ footer .footer-copyright .copyright-text a:hover {
 }
 
 .show-left {
-    animation: slide-left 1s linear;
-    -webkit-animation: slide-left 1s linear;
+    animation: slide-left .5s forwards;
+    -webkit-animation: slide-left .5s forwards;
     opacity: 1 !important;
 }
 
 .show-right {
-    animation: slide-right 1s linear;
-    -webkit-animation: slide-right 1s linear;
+    animation: slide-right .5s forwards;
+    -webkit-animation: slide-right .5s forwards;
     opacity: 1 !important;
 }
 
